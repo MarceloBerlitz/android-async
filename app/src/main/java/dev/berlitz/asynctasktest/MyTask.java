@@ -4,9 +4,9 @@ import android.os.AsyncTask;
 
 public class MyTask extends AsyncTask<Integer, Integer, String> {
 
-    private AsyncTaskHandler ctx;
+    private AsyncTaskHandler<Integer, String> ctx;
 
-    MyTask(AsyncTaskHandler ctx) {
+    MyTask(AsyncTaskHandler<Integer, String> ctx) {
         this.ctx = ctx;
     }
 

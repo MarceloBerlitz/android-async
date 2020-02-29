@@ -40,12 +40,13 @@ public class MainActivity extends AppCompatActivity implements AsyncTaskHandler<
     @Override
     public void handlePostExecute(String result) {
         progressBar.setProgress(0);
+        progressBar.setVisibility(View.INVISIBLE);
         taskSwitch.setChecked(false);
         Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void handlePreExecute() {
-
+        progressBar.setVisibility(View.VISIBLE);
     }
 }
