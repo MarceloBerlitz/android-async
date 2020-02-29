@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements AsyncTaskHandler<
     }
 
     public void toggleAsyncTask(View view) {
+        taskSwitch.setClickable(false);
         MyTask task = new MyTask(this);
         task.execute(progressMax);
     }
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements AsyncTaskHandler<
         progressBar.setProgress(0);
         progressBar.setVisibility(View.INVISIBLE);
         taskSwitch.setChecked(false);
+        taskSwitch.setClickable(true);
         Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
     }
 
